@@ -1,0 +1,4 @@
+baseurl = "http://10.4.131.206:8080"
+languageCode = "en-us"
+title = "Mangrove"
+theme = "hugo-theme-learn"
