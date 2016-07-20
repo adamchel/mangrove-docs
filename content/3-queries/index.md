@@ -1,8 +1,8 @@
 +++
 chapter = true
 icon = "<b>3. </b>"
-next = "/next/path"
-prev = "/prev/path"
+next = "/4-updates"
+prev = "/2-models/dynamic-schemas"
 title = "Queries"
 weight = 0
 

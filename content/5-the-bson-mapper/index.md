@@ -1,8 +1,7 @@
 +++
 chapter = true
 icon = "<b>5. </b>"
-next = "/next/path"
-prev = "/prev/path"
+prev = "/4-updates"
 title = "The BSON Mapper"
 weight = 0
 
@@ -12,4 +11,4 @@ weight = 0
 
 # The BSON Mapper
 
-Learn about the {{% a_blank "Cereal" "http://uscilab.github.io/cereal/" %}}-powered **BSON serializer** that makes Mangrove work, and how you can use it in your own programs.
+Learn about the {{% a_blank "Cereal" "http://uscilab.github.io/cereal/" %}}-powered **BSON serializer** that makes Mangrove work, and how you can use it in your own applications.

@@ -1,8 +1,8 @@
 +++
 chapter = true
 icon = "<b>4. </b>"
-next = "/next/path"
-prev = "/prev/path"
+next = "/5-the-bson-mapper"
+prev = "/3-queries"
 title = "Updates"
 weight = 0
 
