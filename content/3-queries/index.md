@@ -12,4 +12,4 @@ weight = 0
 
 # Queries
 
-Lorem ipsum
+Learn about the rich **query** system supported by Mangrove's **models**.

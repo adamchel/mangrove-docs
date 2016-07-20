@@ -12,4 +12,4 @@ weight = 0
 
 # Updates
 
-Lorem ipsum
+Learn how to use Mangrove's **update** builder to perform advanced bulk updates.

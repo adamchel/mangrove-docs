@@ -7,7 +7,7 @@ weight = 1
 
 +++
 
-A **model** is the fundamental way you access data in MongoDB with Mangrove. Models lets you treat C++ classes as objects you can store in the database. When you make a class a model, you can specify
+A **model** is the fundamental way you access data in MongoDB with Mangrove. Models lets you treat C++ classes as objects you can store in the database. When you make a class a model, it is given the semantics of a MongoDB collection, and has access to all of these static methods (TODO: add doxygen link).
 
 ## Creating a Model
 
