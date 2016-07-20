@@ -75,9 +75,7 @@ This macro specifies that blog entries should be stored in the database with the
 
 ## Registering the Model with a MongoDB Collection
 
-The last step you must take before you can use the `BlogEntry` model is to register the model with a MongoDB database. Mangrove itself doesn't handle the connection to the database, that responsibility is held by the C++ Driver, which provides the `mongocxx::client` class. You can learn more about that class in the C++ Driver's {{% a_blank "API Documentation""http://mongodb.github.io/mongo-cxx-driver/classmongocxx_1_1client.html"%}}. 
-
-In the following example, we'll use a connection to the database hosted at `localhost` on port 27017.
+The last step you must take before you can use the `BlogEntry` model is to register the model with a MongoDB database using the MongoDB C++ Driver. In the following example, we'll use a connection to the database hosted at `localhost` on port 27017.
 
 ```cpp
 #include <mongocxx/client.hpp>
@@ -92,11 +90,9 @@ int main() {
 }
 ```
 
-Since `BlogEntry` inherited from the model, it has a static function `setCollection()` that lets you specify in which collection to save and retrieve instances of `BlogEntry`. It accepts a `mongocxx::collection`, which is accessible via the `mongocxx::client`. The code above sets `BlogEntry`'s collection to the `"entries"` collection in the `"my_blog"` database hosted at `"mongodb://localhost:27017"`.
+The `BlogEntry` model has a static function `setCollection()` that lets you specify in which collection to save and retrieve instances of `BlogEntry`. It accepts a `mongocxx::collection`, which is accessible via the `mongocxx::client`. The code above sets `BlogEntry`'s collection to the `"entries"` collection in the `"my_blog"` database hosted at `"mongodb://localhost:27017"`.
 
-{{% notice warning %}}
-The `mongocxx::client` class is *not thread-safe*. To get around this, the `mangrove::model` class provides thread-local storage for the collection associated with a particular model. You can make your applications thread-safe by calling the model's `setCollection()` function on each thread with a collection from a new `mongocxx::client`. You can read more about the C++ Driver's thread safety {{% a_blank here "https://github.com/mongodb/mongo-cxx-driver/wiki/Library-Thread-Safety" %}}.
-{{% /notice %}}
+If you're planning on writing multi-threaded applications with Mangrove, be sure to carefully read the warning [here](/2-models/introduction/#linking-with-the-database)
 
 ## Saving Objects
 
